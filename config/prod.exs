@@ -69,4 +69,15 @@ config :logger, level: :info
 
 # Finally import the config/prod.secret.exs which should be versioned
 # separately.
-import_config "prod.secret.exs"
+# import_config "prod.secret.exs"
+config :keeper, KeeperWeb.Endpoint,
+  secret_key_base: System.get_env("SECRET_KEY_BASE"),
+  live_view: [
+    signing_salt: System.get_env("SIGNING_SALT")
+  ]
+
+# Configure your database
+config :keeper, Keeper.Repo,
+  ssl: true,
+  url: database_url,
+  pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10")
