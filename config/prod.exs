@@ -79,5 +79,5 @@ config :keeper, KeeperWeb.Endpoint,
 # Configure your database
 config :keeper, Keeper.Repo,
   ssl: true,
-  url: database_url,
+  url: System.get_env("DATABASE_URL"),
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10")
