@@ -3,6 +3,7 @@ defmodule KeeperWeb.PageLive do
 
   def render(assigns) do
     ~L"""
+    Should be a circle moving...
     <canvas data-i="<%= @i %>" phx-hook="Canvas">
       Canvas is not supported!
     </canvas>
