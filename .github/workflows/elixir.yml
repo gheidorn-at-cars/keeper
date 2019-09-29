@@ -18,8 +18,8 @@ jobs:
           mix deps.get
       - name: Create DB
         run: |
-          sudo apt-get update
-          sudo apt-get install postgresql-client -y
+          apt-get update
+          apt-get install postgresql-client -y
           ATTEMPTS=10
           until PGPASSWORD=password psql -h 127.0.0.1 -U postgres -d postgres -c "select 1" > /dev/null 2>&1; do
             if [ $ATTEMPTS -eq 0 ]; then
