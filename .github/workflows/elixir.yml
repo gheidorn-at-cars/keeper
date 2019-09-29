@@ -16,7 +16,7 @@ jobs:
           mix local.rebar --force
           mix local.hex --force
           mix deps.get
-    - name: Create DB
+      - name: Create DB
         run: |
           sudo apt-get update
           sudo apt-get install postgresql-client -y
