@@ -72,7 +72,7 @@ config :logger, level: :info
 # import_config "prod.secret.exs"
 config :keeper, KeeperWeb.Endpoint,
   secret_key_base: System.get_env("SECRET_KEY_BASE"),
-  check_origin: ["//localhost", "//still-atoll-56227.herokuapp.com"]
+  check_origin: ["//localhost", "//still-atoll-56227.herokuapp.com"],
   live_view: [
     signing_salt: System.get_env("SIGNING_SALT")
   ]
