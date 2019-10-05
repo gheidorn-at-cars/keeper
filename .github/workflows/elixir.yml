@@ -4,6 +4,7 @@ on: push
 
 jobs:
   build:
+    name: build
     runs-on: ubuntu-latest
 
     services:
@@ -36,6 +37,7 @@ jobs:
       - name: Run Tests
         run: mix test
   deploy:
+    name: deploy
     needs: build
     - name: Login to Heroku
       env:
