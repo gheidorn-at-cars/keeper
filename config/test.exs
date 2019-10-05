@@ -4,7 +4,10 @@ use Mix.Config
 # you can enable the server option below.
 config :keeper, KeeperWeb.Endpoint,
   http: [port: 4002],
-  server: false
+  server: false,
+  live_view: [
+    signing_salt: "Awq6ke194GoAGWqiYrfhjOAPR4xhoDClnSsB0GuYPdE623R6Qw8rNHPEe+J/ESpX"
+  ]
 
 # Print only warnings and errors during test
 config :logger, level: :warn

@@ -57,9 +57,7 @@ config :keeper, KeeperWeb.Endpoint,
     ]
   ],
   live_view: [
-    signing_salt:
-      System.get_env("SIGNING_SALT") ||
-        "Awq6ke194GoAGWqiYrfhjOAPR4xhoDClnSsB0GuYPdE623R6Qw8rNHPEe+J/ESpX"
+    signing_salt: "Awq6ke194GoAGWqiYrfhjOAPR4xhoDClnSsB0GuYPdE623R6Qw8rNHPEe+J/ESpX"
   ]
 
 # Do not include metadata nor timestamps in development logs
