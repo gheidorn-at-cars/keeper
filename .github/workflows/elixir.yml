@@ -3,8 +3,8 @@ name: Build, Test and Deploy
 on: push
 
 jobs:
-  build:
-    name: build
+  job1:
+    name: job1
     runs-on: ubuntu-latest
 
     services:
@@ -38,7 +38,7 @@ jobs:
         run: mix test
   deploy:
     name: deploy
-    needs: build
+    needs: job1
     - name: Login to Heroku
       env:
         HEROKU_API_KEY: ${{ secrets.HEROKU_API_KEY }}
