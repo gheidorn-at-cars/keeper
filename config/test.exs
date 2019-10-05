@@ -15,7 +15,7 @@ config :logger, level: :warn
 # Configure your database
 config :keeper, Keeper.Repo,
   username: "postgres",
-  password: "postgres",
+  password: System.get_env("POSTGRES_PASSWORD") || "postgres",
   database: "keeper_test",
-  hostname: "localhost",
+  hostname: System.get_env("POSTGRES_HOSTNAME") || "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
