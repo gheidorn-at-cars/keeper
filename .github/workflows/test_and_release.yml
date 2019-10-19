@@ -1,8 +1,9 @@
 name:  Application Test and Release Workflow
-  on:
-    push:
-      branches:
-        - master
+
+on:
+  push:
+    branches:
+      - master
 
 jobs:
   test:
