@@ -37,7 +37,7 @@ jobs:
     needs: test
 
     steps:
-      - users: actions/checkout@v1.0.0
+      - uses: actions/checkout@v1.0.0
       - run: |+
           cat >~/.netrc <<EOF
           machine api.heroku.com
