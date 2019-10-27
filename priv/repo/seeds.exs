@@ -9,3 +9,9 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
+alias Keeper.Repo
+alias Keeper.Customers.Dealer
+
+Repo.insert!(%Dealer{name: "Acme Autobarn", primary_contact: "John Doe", make: "Chevrolet"})
+
+Repo.insert!(%Dealer{name: "Local Honda Store", primary_contact: "Jane Smith", make: "Honda"})

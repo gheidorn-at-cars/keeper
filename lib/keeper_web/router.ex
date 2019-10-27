@@ -21,7 +21,9 @@ defmodule KeeperWeb.Router do
   end
 
   # Other scopes may use custom stacks.
-  # scope "/api", KeeperWeb do
-  #   pipe_through :api
-  # end
+  scope "/api", KeeperWeb do
+    pipe_through :api
+
+    resources "/dealers", DealerController
+  end
 end
